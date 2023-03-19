@@ -23,7 +23,7 @@ export async function apiService(apiKey, prompt, callback) {
             content: prompt,
           },
         ],
-        temperature: 0.9,
+        temperature: 0.7,
         stream: true,
       }),
       onMessage(message) {

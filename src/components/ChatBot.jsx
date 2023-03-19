@@ -121,22 +121,22 @@ const ChatBot = () => {
 
   return (
     <Box bg="rgb(103 86 189 / 1)" overflowY="auto">
-      <Container maxW='container.sm' bg="#fff6" p="20px" borderRadius="xl" m={{ sm: "10px", md: "10px auto" }}>
+      <Container maxW='container.sm' bg="#fff6" px={{ base: "0px", md: "20px" }} py={{ base: "0px", md: "20px" }} borderRadius="xl" m={{ base: "0px", md: "10px auto" }}>
         {apiKey === "" ? (
-          <Box borderWidth="1px" bg="#fff" borderRadius="xl" height="calc(100vh - 60px)" px="20" py="40"  textAlign="center">
+          <Box borderWidth="1px" bg="#fff" borderRadius={{ base: "", md: "xl" }} height={{ base: "100vh", md: "calc(100vh - 60px)" }} px={{ base: "15px", md: "50px" }} py="40"  textAlign="center">
             <Heading as="h2" size="lg" mb="5">OpenAI Chat Application</Heading>
             <Text my="5">Please Enter API Key First</Text>
             <Text my="5">You can find or create your API key <Link color="blue.500" href="https://platform.openai.com/account/api-keys" target="_blank">here</Link></Text>
             <Text my="5">Once you authenticate Key, It will be stored in LocalStorage</Text>
             <FormControl position="relative" as="form" onSubmit={onSubmit}>
-              <Input />
+              <Input placeholder="Enter API Key" pe="130px"/>
               <Button colorScheme="blue" type="submit" position="absolute" right="0" bottom="0" zIndex="1" mt="5">
                 Authenticate
               </Button>
             </FormControl>
           </Box>
         ): (
-          <Box borderWidth="1px" bg="#fff" borderRadius="xl">
+          <Box borderWidth="1px" bg="#fff" borderRadius={{ base: "0px", md: "xl" }}>
             <ScrollToBottom className="h-full">
               <Box p={4}>
                 <VStack spacing={4}>
