@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { memo } from "react";
 import MarkdownIt from "markdown-it";
 import hljs from "highlight.js";
