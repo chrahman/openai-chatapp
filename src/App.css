@@ -1,38 +1,32 @@
-.App {
-  text-align: center;
+:root {
+  --toastify-toast-width: 380px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.h-full {
+  height: calc(100vh - 175px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Toastify__toast-container--bottom-center {
+  bottom: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+code, pre {
+  background-color: #eee;
+  padding: 2px 4px;
+  border-radius: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+pre {
+  padding: 15px 10px;
+  margin: 10px 0 !important;
+  width: 470px;
+  max-width: 100%;
+  overflow: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (max-width: 480px) {
+  pre {
+    width: 200px;
+    min-width: 100%;
   }
 }
